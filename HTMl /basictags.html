@@ -17,7 +17,45 @@
         <link rel="icon" type="image/x-icon" href="cafe_building_shop_coffee_store_icon_210184.ico">
         <title>Basic Tags Examples</title>
         <style>
-            table, th, td {
+            * {
+  box-sizing: border-box;
+}
+            header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  
+}
+nav {
+  float: left;
+  width: 30%;
+
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}      
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+ 
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}  
+table, th, td {
               border: 1px solid red;
               border-collapse: collapse;
             }
@@ -43,6 +81,32 @@
         </style>
     </head>
     <body>
+
+<header>
+    <h2>HTML Elements</h2>
+  </header>
+  <section>
+    <nav>
+      <ul>
+        <li><a href="#">Headings</a></li>
+        <li><a href="#">Paragraph</a></li>
+        <li><a href="#">Styles</a></li>
+        <li><a href="#">Formatting</a></li>
+        <li><a href="#">Quotation and Citation</a></li>
+        <li><a href="#">Colors</a></li>
+        <li><a href="#">Links</a></li>
+        <li><a href="#">Image</a></li>
+        <li><a href="#">Table</a></li>
+        <li><a href="#">Lists</a></li>
+        <li><a href="#">Block and Inline Elements</a></li>
+        <li><a href="#">ID & Class</a></li>
+        <li><a href="#">IFrame</a></li>
+        <li><a href="#">Computer Code Elements</a></li>
+        <li><a href="#">Entities</a></li>
+        <li><a href="#">Emojis</a></li>
+      </ul>
+    </nav>
+    <article>
 
         <!-- HTML Heading Examples-->
 
@@ -335,5 +399,125 @@
         <h1><center>IFrame</center></h1>
         <iframe src="https://www.w3schools.com" style="border:2px solid black" title="Google Website in Iframe"></iframe> 
         <hr>
+        <h1><center>Computer Code Elements</center></h1>
+        <p>Code Element</p>
+        <pre>
+        <code>
+            x = 10;
+            y = 10;
+            print(x+y);
+            </code>
+        </pre>
+        <samp>This is Samp Element</samp>
+        <p>Variable Element</p>
+        <var>b</var>x<var>h</var> = <var>bh</var>
+        <hr>
+        <h1><center>Entities</center></h1>
+        <table>
+            <tr>
+                <td>Symbol Name</td>
+                <td>Symbol</td>
+            </tr>
+            <tr>
+                <td>Less than</td>
+                <td>&lt;</td>
+            </tr>
+            <tr>
+                <td>Greater than</td>
+                <td>&gt;</td>
+            </tr>
+            <tr>
+                <td>Ampersand</td>
+                <td>&amp;</td>
+            </tr>
+            <tr>
+                <td>Double Quotation</td>
+                <td>&quot;</td>
+            </tr>
+            <tr>
+                <td>Single Quotation</td>
+                <td>&apos;</td>
+            </tr>
+            <tr>
+                <td>Cent</td>
+                <td>&cent;</td>
+            </tr>
+            <tr>
+                <td>Pound</td>
+                <td>&pound;</td>
+            </tr>
+            <tr>
+                <td>Yen</td>
+                <td>&yen;</td>
+            </tr>
+            <tr>
+                <td>Euro</td>
+                <td>&euro;</td>
+            </tr>
+            <tr>
+                <td>Copy</td>
+                <td>&copy;</td>
+            </tr>
+            <tr>
+                <td>Registered TradeMark</td>
+                <td>&reg;</td>
+            </tr>
+            <tr>
+                <td>For all</td>
+                <td>&forall;</td>
+            </tr>
+            <tr>
+                <td>Partial Difference</td>
+                <td>&part;</td>
+            </tr>
+            <tr>
+                <td>There Exists</td>
+                <td>&exist;</td>
+            </tr>
+            <tr>
+                <td>Empty Set</td>
+                <td>&empty;</td>
+            </tr>
+            <tr>
+                <td>Nabla</td>
+                <td>&nabla;</td>
+            </tr>
+            <tr>
+                <td>Element of</td>
+                <td>&isin;</td>
+            </tr>
+            <tr>
+                <td>Not an Element of</td>
+                <td>&notin;</td>
+            </tr>
+            <tr>
+                <td>Contains as Member</td>
+                <td>&ni;</td>
+            </tr>
+            <tr>
+                <td>N-Ary Product</td>
+                <td>&prod;</td>
+            </tr>
+            <tr>
+                <td>N-Ary Summation</td>
+                <td>&sum;</td>
+            </tr>
+        </table>
+<hr>
+        <h1><center>Emojis</center></h1>
+        <p>Emoji Examples</p>
+        <p>&#128512;</p>
+        <p>&#128513;</p>
+        <p>&#128514;</p>
+        <p>&#128515;</p>
+        <p>&#128516;</p>
+        <p>&#128517;</p>
+        <p>&#128518;</p>
+        <p>&#128519;</p>
+        <p>&#128520;</p>
+    <hr>
+        </article>
+        
+        </section>
         </body>
 </html>

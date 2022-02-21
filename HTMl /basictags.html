@@ -88,27 +88,28 @@ table, th, td {
   <section>
     <nav>
       <ul>
-        <li><a href="#">Headings</a></li>
-        <li><a href="#">Paragraph</a></li>
-        <li><a href="#">Styles</a></li>
-        <li><a href="#">Formatting</a></li>
-        <li><a href="#">Quotation and Citation</a></li>
-        <li><a href="#">Colors</a></li>
-        <li><a href="#">Links</a></li>
-        <li><a href="#">Image</a></li>
-        <li><a href="#">Table</a></li>
-        <li><a href="#">Lists</a></li>
-        <li><a href="#">Block and Inline Elements</a></li>
-        <li><a href="#">ID & Class</a></li>
-        <li><a href="#">IFrame</a></li>
-        <li><a href="#">Computer Code Elements</a></li>
-        <li><a href="#">Entities</a></li>
-        <li><a href="#">Emojis</a></li>
+        <li><a href="#heading">Headings</a></li>
+        <li><a href="#paragraph">Paragraph</a></li>
+        <li><a href="#styles">Styles</a></li>
+        <li><a href="#formatting">Formatting</a></li>
+        <li><a href="#quotation">Quotation and Citation</a></li>
+        <li><a href="#colors">Colors</a></li>
+        <li><a href="#links">Links</a></li>
+        <li><a href="#image">Image</a></li>
+        <li><a href="#tableid">Table</a></li>
+        <li><a href="#lists">Lists</a></li>
+        <li><a href="#block">Block and Inline Elements</a></li>
+        <li><a href="#idclass">ID & Class</a></li>
+        <li><a href="#iframe">IFrame</a></li>
+        <li><a href="#computer">Computer Code Elements</a></li>
+        <li><a href="#entities">Entities</a></li>
+        <li><a href="#emojis">Emojis</a></li>
       </ul>
     </nav>
     <article>
 
         <!-- HTML Heading Examples-->
+        <div id="heading">
 
        <center><h1>HTML Heading EXAMPLES</h1></center>
         <h1>This is heading H1</h1>
@@ -118,11 +119,11 @@ table, th, td {
         <h5>This is heading H5</h5>
         <h6>This is heading H6</h6>
         <hr>
-
+    </div>
         <!-- End of HTML Headings Examples -->
 
         <!-- HTML Paragraph Examples -->
-
+        <div id="paragraph">
        <center> <h1>Paragraphs</h1></center>
         <p>This is Paragraph</p>
         <p>This is Paragraph<br/>with break</p>
@@ -132,11 +133,12 @@ table, th, td {
                     text
         </pre>
         <hr>
+        </div>
 
         <!-- End of HTML Paragraph Examples -->
 
         <!-- HTML Styles Examples -->
-
+        <div id="styles">
         <center><h1>Styles</h1></center>
         <div style="background-color: red;height:250px">
             <p style="color:white;">This is White color text</p>
@@ -145,11 +147,11 @@ table, th, td {
             <p style="font-family:cursive;">Font Family is cursive</p>
         </div>
         <hr>
-
+</div>
         <!-- End of HTMl Styles Examples -->
 
         <!-- HTML Formatting Examples -->
-
+        <div id="formatting">
         <h1><center>Formatting</center></h1>
         <p><b>This is Bold text</b></p>
         <p><strong>This is Strong text</strong></p>
@@ -162,11 +164,11 @@ table, th, td {
         <p>This is Super <sup>text</sup></p>
         <p>This is Sub <sub>text</sub></p>
         <hr>
-
+            </div>
         <!--End of HTML Formatting Examples -->
 
         <!--HTML Quotation and Citation Examples -->
-
+        <div id="quotation">
         <h1><center>Quotation and Citation</center></h1>
         <blockquote>This is BlockQuote Element. I have joined Simfor as a Trainee. i have been assingned Javascript backened Statck. I have to learn 
             various courses like Basic of Git, HTML, CSS , Javascript, TypeScript, Node JS. My internship period at Simform is for 6 Months
@@ -185,15 +187,17 @@ table, th, td {
         <p><cite>The Rich Dad Poor Dad</cite> by Robert Kiyosaki is amazing book on financial. The books teaches us how to manage money and grow it. Invest in assets than Liabilities</p> 
         <bdo dir="rtl">See this text. It is written from right to left</bdo> 
         <hr>
-
+        </div>
         <!-- End of HTML Quotation and Citation Examples -->
-
+        <div id="colors">
 
         <h1><center>Colors</center></h1>
         <p style="color:red;">This is Red Colour</p>
         <p style="border:2px solid blue;">This is text with blue colour border</p>
         <h2 style="background-color: orange;">Background Color is Orange</h2>
         <hr>
+        </div>
+        <div id="links">
         <h1><center>Links</center></h1>
 
         <p>To Visit Google <a href="https://www.google.com" title="Visit Google">Click here</a></p>
@@ -204,6 +208,8 @@ table, th, td {
         <p>Send Email to Kishan Patel <a href="mailto:kishan.p@simformsolutions.com">Click Here</a></p> 
         <button onclick="document.location='https://google.com'">Visit Google</button> 
         <hr>
+        </div>
+        <div id="image">
         <h1><center>Image</center></h1>
         <h3>Image</h3>
         <img src="148027305ISKCONTemple_Main.jpg" alt="Iskcon Temple" height="200px" width="200px"> 
@@ -228,6 +234,8 @@ table, th, td {
             <img src="148027305ISKCONTemple_Main.jpg" height="200px" width="200px">
           </picture> 
           <hr>
+          </div>
+          <div id="tableid">
           <h1><center>Table</center></h1>
           <table>
             <caption>User Company Details</caption>
@@ -359,6 +367,8 @@ table, th, td {
             </tr>
           </table>
           <hr>
+          </div>
+          <div id="lists">
           <h1><center>Lists</center></h1>
           <p>UnOrdered List</p>
           <ul>
@@ -380,11 +390,15 @@ table, th, td {
             <dd>- white cold drink</dd>
           </dl> 
           <hr>
+          </div>
+          <div id="block">
           <h1><center>Block and Inline Element</center></h1>
           <p>This is Block Element</p>
           <div>This is Block Element</div>
           <p>This is <span>Inline Element</span></p>
           <hr>
+          </div>
+          <div id="idclass">
           <h1><center>ID & Class</center></h1>
           <div class="city">
               <p>This is Example of Class 1</p>
@@ -396,9 +410,13 @@ table, th, td {
             <p>This is Example of ID</p>
         </div>
         <hr>
+        </div>
+        <div id="iframe">
         <h1><center>IFrame</center></h1>
         <iframe src="https://www.w3schools.com" style="border:2px solid black" title="Google Website in Iframe"></iframe> 
         <hr>
+        </div>
+        <div id="computer">
         <h1><center>Computer Code Elements</center></h1>
         <p>Code Element</p>
         <pre>
@@ -412,6 +430,8 @@ table, th, td {
         <p>Variable Element</p>
         <var>b</var>x<var>h</var> = <var>bh</var>
         <hr>
+        </div>
+        <div id="entities">
         <h1><center>Entities</center></h1>
         <table>
             <tr>
@@ -504,6 +524,8 @@ table, th, td {
             </tr>
         </table>
 <hr>
+</div>
+<div id="emojis">
         <h1><center>Emojis</center></h1>
         <p>Emoji Examples</p>
         <p>&#128512;</p>
@@ -516,6 +538,7 @@ table, th, td {
         <p>&#128519;</p>
         <p>&#128520;</p>
     <hr>
+    </div>
         </article>
         
         </section>

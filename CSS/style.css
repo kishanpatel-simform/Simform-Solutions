@@ -1,4 +1,491 @@
-body {
-    background-color: lightblue;
-    /* Set background Colour to Light Blue. This is a Comment*/
-}
+    body {
+        background-color: lightblue;
+        /* Set background Colour to Light Blue. This is a Comment*/
+    }
+    
+    hr {
+        background-color: black;
+    }
+    
+    #pseudoafter::after {
+        content: url(img/smiley.png);
+    }
+    
+    #pseudobefore::before {
+        content: url('img/smiley.png');
+    }
+    
+    #pseudoselection::selection {
+        background-color: darkgoldenrod;
+    }
+    /* Vertical Navigation Bar*/
+    
+    .demomenu {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        background-color: #f1f1f1;
+        width: 80px;
+    }
+    
+    .demomenu li a {
+        display: block;
+        color: black;
+        text-decoration: none;
+    }
+    
+    .demomenu li a:hover {
+        background-color: green;
+    }
+    
+    .demomenu li a:active {
+        background-color: green;
+    }
+    /* End of Vertical Navigation Bar */
+    /* Horizontal Menu */
+    
+    .demohorizonmenu {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        background-color: black;
+        overflow: hidden;
+        height: 50px;
+    }
+    
+    .demohorizonmenu li {
+        float: left;
+    }
+    
+    .demohorizonmenu li a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 14px 16px;
+        text-align: center;
+    }
+    
+    .demohorizonmenu li a:hover {
+        background-color: green;
+    }
+    /* End of Horizontal Menu */
+    /* Dropdown Menu */
+    
+    .dropbtn {
+        background-color: green;
+        font-size: 20px;
+        padding: 15px;
+    }
+    
+    .dropdown {
+        display: inline-block;
+        position: relative;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        width: 125px;
+        background-color: black;
+    }
+    
+    .dropdown-content a {
+        text-decoration: none;
+        display: block;
+        color: #f1f1f1;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    .dropdown-content a:hover {
+        text-decoration: none;
+        display: block;
+        background-color: green
+    }
+    /* End of Dropdown Menu */
+    /* Image Gallery */
+    
+    div.gallery {
+        margin: 5px;
+        border: 1px solid black;
+        width: 180px;
+        float: left;
+    }
+    
+    div.gallery img {
+        width: 100%;
+        height: auto;
+    }
+    
+    div.desc {
+        padding: 15px;
+        text-align: center;
+    }
+    /* End of Image Gallery */
+    /* CSS Forms */
+    
+    .inputfield {
+        width: 175px;
+        font-size: 25px;
+        border-radius: 5px;
+        display: block;
+        margin: 5px;
+    }
+    
+    .inputfield:focus {
+        background-color: yellow;
+    }
+    
+    label {
+        font-size: 20px;
+        margin: 5px;
+    }
+    
+    .submitbtn {
+        background-color: green;
+        height: 45px;
+        width: 130px;
+        border-radius: 5px;
+    }
+    /* End of CSS Forms */
+    /* Linear gradient */
+    
+    .lineargradient1 {
+        height: 200px;
+        background-color: red;
+        background-image: linear-gradient(red, yellow);
+    }
+    
+    .lineargradient2 {
+        height: 200px;
+        background-color: red;
+        background-image: linear-gradient(red, yellow, green);
+    }
+    
+    .lineargradient3 {
+        height: 200px;
+        background-color: red;
+        background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    }
+    
+    .lineargradient4 {
+        height: 200px;
+        background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
+    }
+    
+    .lineargradient5 {
+        height: 200px;
+        background-color: red;
+        background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+    }
+    /* End of Linear Gradial*/
+    /* Radial Gradial */
+    
+    .radialgradient1 {
+        height: 150px;
+        width: 200px;
+        background-color: red;
+        background-image: radial-gradient(red, yellow, green);
+    }
+    
+    .radialgradient2 {
+        height: 150px;
+        width: 200px;
+        background-color: red;
+        background-image: radial-gradient(red 5%, yellow 15%, green 60%);
+    }
+    
+    .radialgradient3 {
+        height: 150px;
+        width: 200px;
+        background-color: red;
+        background-image: radial-gradient(circle, red, yellow, green);
+    }
+    
+    .radialgradient4 {
+        height: 150px;
+        width: 200px;
+        background-color: red;
+        background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
+    }
+    /* End of Radial Gradient */
+    /* Conic Gradient */
+    
+    .conicgradient1 {
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        background-image: conic-gradient(red, yellow, green);
+    }
+    
+    .conicgradient2 {
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        background-image: conic-gradient(red, yellow, green, blue, black);
+    }
+    
+    .conicgradient3 {
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        background-image: conic-gradient(red 45deg, yellow 90deg, green 210deg);
+    }
+    
+    .conicgradient4 {
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        background-image: conic-gradient(red, yellow, green, blue, black);
+        border-radius: 50%;
+    }
+    
+    .conicgradient5 {
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg);
+        border-radius: 50%;
+    }
+    
+    .conicgradient6 {
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        background-image: repeating-conic-gradient(red 10%, yellow 20%);
+        border-radius: 50%;
+    }
+    /* End of Conic Gradient */
+    /* CSS 2D Transform */
+    
+    .translate {
+        background-color: blue;
+        width: 250px;
+        height: 100px;
+        transform: translate(50px, 100px);
+    }
+    
+    .rotate {
+        margin-top: 100px;
+        background-color: blue;
+        width: 250px;
+        height: 100px;
+        transform: rotate(35deg);
+    }
+    
+    .scale {
+        margin-top: 100px;
+        margin-left: 185px;
+        background-color: blue;
+        width: 250px;
+        height: 100px;
+        transform: scale(2, 3);
+    }
+    
+    .skew {
+        margin-top: 150px;
+        margin-left: 185px;
+        background-color: blue;
+        width: 250px;
+        height: 100px;
+        font-size: 25px;
+        transform: skew(20deg, 30deg);
+    }
+    
+    .matrix {
+        margin-top: 150px;
+        margin-left: 185px;
+        background-color: blue;
+        width: 250px;
+        height: 100px;
+        font-size: 25px;
+        transform: matrix(1, -0.3, 0, 1, 0, 0);
+    }
+    /* End CSS 2D Transform */
+    /* CSS 3D Transform */
+    
+    .rotatex {
+        margin-top: 150px;
+        margin-left: 185px;
+        background-color: blue;
+        width: 250px;
+        height: 100px;
+        font-size: 25px;
+        transform: rotateX(150deg);
+    }
+    
+    .rotatey {
+        margin-top: 150px;
+        margin-left: 185px;
+        background-color: blue;
+        width: 250px;
+        height: 100px;
+        font-size: 25px;
+        transform: rotatey(150deg);
+    }
+    
+    .rotatez {
+        margin-top: 150px;
+        margin-left: 185px;
+        background-color: blue;
+        width: 250px;
+        height: 100px;
+        font-size: 25px;
+        transform: rotatez(150deg);
+    }
+    /* End of CSS 3D Transform */
+    /* CSS Transition*/
+    
+    .transition {
+        width: 100px;
+        height: 100px;
+        background: red;
+        transition: width 2s;
+    }
+    
+    .transition:hover {
+        width: 300px;
+        height: 100px;
+        transform: rotate(30deg);
+    }
+    /* End of CSS Transition*/
+    /* CSS Animation*/
+    
+    .animation {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(29, 202, 66);
+        position: relative;
+        animation-name: example;
+        animation-duration: 4s;
+        animation-iteration-count: 3;
+    }
+    
+    @keyframes example {
+        0% {
+            background-color: red;
+            left: 0px;
+            top: 0px;
+        }
+        25% {
+            background-color: yellow;
+            left: 200px;
+            top: 0px;
+        }
+        50% {
+            background-color: blue;
+            left: 200px;
+            top: 200px;
+        }
+        75% {
+            background-color: green;
+            left: 0px;
+            top: 200px;
+        }
+        100% {
+            background-color: red;
+            left: 0px;
+            top: 0px;
+        }
+    }
+    /* End of CSS Animation*/
+    /* Horizontal Buttons*/
+    
+    .hrbutton {
+        background-color: green;
+        border-radius: 5px;
+        height: 45px;
+        width: auto;
+        text-align: center;
+        float: left;
+    }
+    /* End of Horizontal Buttons */
+    /* Vertical Buttons */
+    
+    .vrbutton {
+        background-color: green;
+        border-radius: 5px;
+        height: 45px;
+        width: auto;
+        text-align: center;
+        display: block;
+    }
+    /* End of Vertical Buttons */
+    /* BreadCrumb */
+    
+    .breadcumb {
+        background-color: bisque;
+        list-style: none;
+        padding: 5px 10px;
+    }
+    
+    .breadcumb li {
+        display: inline;
+    }
+    
+    .breadcumb li+li:before {
+        padding: 8px;
+        color: black;
+        content: "/\00a0";
+    }
+    /* End of BreadCrumb */
+    /* Pagination */
+    
+    .paginationcss {
+        display: inline-block;
+    }
+    
+    .paginationcss a {
+        text-decoration: none;
+        border: 1px solid black;
+        float: left;
+        width: 25px;
+        text-align: center;
+        color: black;
+        background-color: #f1f1f1;
+    }
+    
+    .paginationcss a:hover {
+        background-color: green;
+    }
+    /* End of Pagination */
+    /* CSS Multiple Column */
+    
+    .newscontent {
+        column-count: 3;
+        column-gap: 10px;
+    }
+    /* CSS Multiple Column */
+    
+    .userinterface {
+        border: 1px solid black;
+        width: 250px;
+        resize: both;
+        overflow: auto;
+    }
+    /* End of CSS Multiple Column */
+    /* Media Queries*/
+    
+    @media screen and (max-width: 992px) {
+        body {
+            background-color: blue;
+            color: white;
+        }
+    }
+    /* End of Media Queries */
+    /* Flex Container */
+    
+    .flex-container {
+        display: flex;
+        background-color: rgb(52, 211, 31);
+    }
+    
+    .flex-container>div {
+        background-color: #f1f1f1;
+        margin: 10px;
+        padding: 20px;
+        font-size: 30px;
+    }
+    /* End of Flex Container */

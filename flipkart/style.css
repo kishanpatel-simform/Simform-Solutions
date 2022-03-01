@@ -122,7 +122,7 @@ body {
 }
 
 .sliderarrow {
-    top: 30%;
+    top: 50%;
     background-color: rgb(218, 45, 45);
     height: 104px;
     width: 47px;
@@ -130,4 +130,47 @@ body {
     z-index: 1;
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .11);
     background-color: rgb(255, 255, 255);
+}
+
+.productbtn {
+    background-color: #2874f0;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 20px;
+    color: white;
+    border: 1px solid #2874f0;
+}
+
+.productcard {
+    width: 195px;
+    height: 288px;
+}
+
+.productimg {
+    height: 150px;
+    width: 150px;
+    margin: 20px;
+}
+
+.producttitle {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.productinfo {
+    font-size: 14px;
+    font-weight: 500;
+    color: #388e3c;
+    text-align: center;
+}
+
+.productdesc {
+    font-size: 14px;
+    font-weight: 500;
+    opacity: .6;
+    text-align: center;
 }

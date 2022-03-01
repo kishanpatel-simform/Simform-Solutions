@@ -4,7 +4,7 @@
 <head>
     <title>Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books &amp; More. Best Offers!</title>
     <meta charset="utf-8">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="img/1220366_flipkart_icon.ico">
 </head>
@@ -22,9 +22,12 @@
                 <div class="searchbox">
                     <input class="searchbar" type="text" placeholder="Search for Products, brands and more">
                 </div>
+                <div class="searchicon">
+                    <svg width="20" height="20" viewBox="0 0 17 18" style="display:block;margin:auto;transform: translate(10%, 50%);" xmlns="http://www.w3.org/2000/svg"><g fill="#2874F1" fill-rule="evenodd"><path class="_34RNph" d="m11.618 9.897l4.225 4.212c.092.092.101.232.02.313l-1.465 1.46c-.081.081-.221.072-.314-.02l-4.216-4.203"></path><path class="_34RNph" d="m6.486 10.901c-2.42 0-4.381-1.956-4.381-4.368 0-2.413 1.961-4.369 4.381-4.369 2.42 0 4.381 1.956 4.381 4.369 0 2.413-1.961 4.368-4.381 4.368m0-10.835c-3.582 0-6.486 2.895-6.486 6.467 0 3.572 2.904 6.467 6.486 6.467 3.582 0 6.486-2.895 6.486-6.467 0-3.572-2.904-6.467-6.486-6.467"></path></g></svg>
+                </div>
             </div>
             <div class="col-5">
-                <button style="background-color: white;cursor:pointer;height: 32px;width: 108px;border: 1px solid #dbdbdb;margin-left: 150px;" name="Login">Login</button>
+                <button style="background-color: white;color:#2874f0;cursor:pointer;height: 32px;width: 108px;border: 1px solid #dbdbdb;margin-left: 150px;" name="Login">Login</button>
                 <a href="" style="margin-left: 30px;">More</a> <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(270deg)"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="_2gTTdy"></path></svg>
                 <a style="margin-left: 30px;" href=" "><svg class="V3C5bO " width="14 " height="14 " viewBox="0 0 16 16 " xmlns="http://www.w3.org/2000/svg "><path class="_1bS9ic " d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1
                     0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04
@@ -96,71 +99,154 @@
             <svg width="14.6" height="27" viewBox="0 0 16 27" style="margin-top:80%;margin-left:15px;transform:rotate(180deg);" xmlns="http://www.w3.org/2000/svg" class="_2-wzdc"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#000000" class="FXox6K"></path></svg>
         </div>
     </div>
-    <div class="row" style="background-color: rgb(255,255,255);height:365px;width:78%;margin-left:93px;display: block;position: relative;">
+    <div>
+        <div class="row" style="background-color: rgb(255,255,255);height:365px;width:78%;margin-left:93px;display: block;position: absolute;">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-2">
+                        <h2 style="margin-top: 10px;margin-left: 10px;">Deals of the Day</h2>
+                    </div>
+                    <div class="col-3">
+                        <img src="img/timer_a73398.svg" style="margin-top: 10px;position: absolute;margin-left: 60px;">
+                        <p style="margin-left: 105px;">19 : 43 : 57 Left</p>
+                    </div>
+                    <div class="col-7">
+                        <button class="productbtn" style="display:inline-block;margin-left: 500px;float: right;margin-top: 10px;margin-right: 15px;">View All</button>
+                    </div>
+                </div>
+                <hr style="width: 100%;">
+                <div class="row">
+
+                    <div class="col-1 productcard">
+                        <img class="productimg" src="img/ld12sp-black-decker-original-imaffzy4kcgfvqhk.webp ">
+                        <p class="producttitle">Hardware Accessories</p>
+                        <p class="productinfo">20-60% OFF + Extra 15%</p>
+                        <p class="productdesc">Today's Deal</p>
+                    </div>
+                    <div class="col-1 productcard">
+                        <img class="productimg" src="img/gas stoves.webp ">
+                        <p class="producttitle">Kitchen Products</p>
+                        <p class="productinfo">60% OFF </p>
+                        <p class="productdesc">Lightning Deal</p>
+                    </div>
+                    <div class="col-1 productcard">
+                        <img class="productimg" src="img/nit25-219fa-6kg-nitasha-original-imagfvadqrbn5rgh.webp ">
+                        <p class="producttitle">Electronics</p>
+                        <p class="productinfo">From ₹21199 + Extra 5%</p>
+                        <p class="productdesc">#electronicdeals</p>
+                    </div>
+                    <div class="col-1 productcard">
+                        <img class="productimg" src="img/fs5151i-fossil-original-imafed97nwxty4u9.webp ">
+                        <p class="producttitle">Titan, Casio, Fossils...</p>
+                        <p class="productinfo">20-60% OFF + Extra 5%</p>
+                        <p class="productdesc">Deals that you Deserve</p>
+                    </div>
+                    <div class="col-1 productcard">
+                        <img class="productimg" src="img/watch.webp ">
+                        <p class="producttitle">Men & Women Sunglasses</p>
+                        <p class="productinfo">From ₹199 + Upto 10%Off</p>
+                        <p class="productdesc">#unbelivableprices</p>
+                    </div>
+                    <div class="col-1 productcard">
+                        <img class="productimg" src="img/saree.webp ">
+                        <p class="producttitle">Sarees</p>
+                        <p class="productinfo">From ₹649</p>
+                        <p class="productdesc">In High Demand!</p>
+                    </div>
+                    <div class="col-1 productcard">
+                        <img class="productimg" src="img/helmet.webp ">
+                        <p class="producttitle">Car & Bike Accessories</p>
+                        <p class="productinfo">From ₹49</p>
+                        <p class="productdesc">Top Selling!</p>
+                    </div>
+                </div>
+                <div style="right: 0px;margin-top: -30px;" class="sliderarrow">
+                    <svg width="14.6" height="27" viewBox="0 0 16 27" style="margin-top:80%;margin-left:15px;transform:rotate(180deg);" xmlns="http://www.w3.org/2000/svg" class="_2-wzdc"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#000000" class="FXox6K"></path></svg>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="">
+            <img src="img/img2.png" height="365" width="200" style="position: absolute;float: right;margin-left: 1530px;">
+        </div>
+    </div>
+
+    <br/>
+    <div class="row" style="background-color: rgb(255,255,255);height:390px;width:89%;margin-left:93px;position: absolute;clear: both;margin-top: 360px;">
         <div class="col-12">
             <div class="row">
-                <div class="col-2">
-                    <h2 style="margin-top: 10px;">Deals of the Day</h2>
+                <div class="col-4">
+                    <p style="margin-top: 10px;font-weight: bold;font-size: 18px;margin-left: 15px;">Books and Music Instruments</p>
+                    <p style="margin-top: 0px;opacity: .6;margin-left: 15px;">Shop now!</p>
                 </div>
-                <div class="col-3">
-                    <img src="img/timer_a73398.svg" style="margin-top: 10px;position: absolute;margin-left: 60px;">
-                    <p style="margin-left: 105px;">19 : 43 : 57 Left</p>
-                </div>
-                <div class="col-7">
+                <div class="col-8">
                     <button class="productbtn" style="display:inline-block;margin-left: 500px;float: right;margin-top: 10px;margin-right: 15px;">View All</button>
                 </div>
+
             </div>
             <hr style="width: 100%;">
             <div class="row">
 
                 <div class="col-1 productcard">
-                    <img class="productimg" src="img/ld12sp-black-decker-original-imaffzy4kcgfvqhk.webp ">
-                    <p class="producttitle">Hardware Accessories</p>
-                    <p class="productinfo">20-60% OFF + Extra 15%</p>
-                    <p class="productdesc">Today's Deal</p>
+                    <img class="productimg" src="img/pr1.webp ">
+                    <p class="producttitle">Nike, New Balance</p>
+                    <p class="productinfo">Upto 40%OFF</p>
+                    <p class="productdesc">SS'21 Collection</p>
                 </div>
                 <div class="col-1 productcard">
-                    <img class="productimg" src="img/gas stoves.webp ">
-                    <p class="producttitle">Kitchen Products</p>
-                    <p class="productinfo">60% OFF </p>
-                    <p class="productdesc">Lightning Deal</p>
+                    <img class="productimg" src="img/pr2.webp">
+                    <p class="producttitle">Nike</p>
+                    <p class="productinfo">Upto 60% OFF </p>
+                    <p class="productdesc">Slippers & Flip Flops</p>
                 </div>
                 <div class="col-1 productcard">
-                    <img class="productimg" src="img/nit25-219fa-6kg-nitasha-original-imagfvadqrbn5rgh.webp ">
-                    <p class="producttitle">Electronics</p>
-                    <p class="productinfo">From ₹21199 + Extra 5%</p>
-                    <p class="productdesc">#electronicdeals</p>
+                    <img class="productimg" src="img/pr3.webp">
+                    <p class="producttitle">Campus, Asian & more</p>
+                    <p class="productinfo">From ₹399</p>
+                    <p class="productdesc">Running Shoes</p>
                 </div>
                 <div class="col-1 productcard">
-                    <img class="productimg" src="img/fs5151i-fossil-original-imafed97nwxty4u9.webp ">
-                    <p class="producttitle">Titan, Casio, Fossils...</p>
-                    <p class="productinfo">20-60% OFF + Extra 5%</p>
-                    <p class="productdesc">Deals that you Deserve</p>
+                    <img class="productimg" src="img/pr4.webp">
+                    <p class="producttitle">Crop Top & Lehengas</p>
+                    <p class="productinfo">Min 60% OFF</p>
+                    <p class="productdesc">Floral Print,Self Design... </p>
                 </div>
                 <div class="col-1 productcard">
-                    <img class="productimg" src="img/watch.webp ">
-                    <p class="producttitle">Men & Women Sunglasses</p>
-                    <p class="productinfo">From ₹199 + Upto 10%Off</p>
-                    <p class="productdesc">#unbelivableprices</p>
+                    <img class="productimg" src="img/pr5.webp">
+                    <p class="producttitle">Rubellite</p>
+                    <p class="productinfo">From ₹299</p>
+                    <p class="productdesc">Kurtas & Sets</p>
                 </div>
                 <div class="col-1 productcard">
-                    <img class="productimg" src="img/saree.webp ">
-                    <p class="producttitle">Sarees</p>
-                    <p class="productinfo">From ₹649</p>
-                    <p class="productdesc">In High Demand!</p>
+                    <img class="productimg" src="img/pr6.webp">
+                    <p class="producttitle">Nike, Skechers & more</p>
+                    <p class="productinfo">Upto 50% OFF</p>
+                    <p class="productdesc">Sports Shoes</p>
                 </div>
                 <div class="col-1 productcard">
-                    <img class="productimg" src="img/helmet.webp ">
-                    <p class="producttitle">Car & Bike Accessories</p>
-                    <p class="productinfo">From ₹49</p>
-                    <p class="productdesc">Top Selling!</p>
+                    <img class="productimg" src="img/pr7.webp">
+                    <p class="producttitle">Sparx, Paragon & Khadim's...</p>
+                    <p class="productinfo">From ₹149</p>
+                    <p class="productdesc">Sandals, Slippers & more</p>
+                </div>
+                <div class="col-1 productcard">
+                    <img class="productimg" src="img/pr8.webp">
+                    <p class="producttitle">Nike, Skechers & more</p>
+                    <p class="productinfo">From ₹1999</p>
+                    <p class="productdesc">New Collections</p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row" style="background-color: chocolate;height:100px;position:absolute;float: right;z-index: 1;">
-        <img src="img/img1.png" height="365" width="200" style="position: absolute;clear: both;display: block;float:right;">
+
+    <div class="row" style="height: 200px;position:absolute;float: none;margin-top: 770px;">
+        <img src="img/img11.png" height="300" width="350" style="margin-left: 180px;">
+        <img src="img/img12.png" height="300" width="350" style="margin-left: 10px;">
+        <img src="img/img13.png" height="300" width="350" style="margin-left: 10px;">
+        <img src="img/img14.png" height="300" width="350" style="margin-left: 10px;">
     </div>
+
+
+
 </body>
 
 </html>

@@ -15,7 +15,6 @@ body {
 [class*="col-"] {
     float: left;
     padding: 0px;
-    border: 1px solid red;
 }
 
 .col-1 {
@@ -88,16 +87,29 @@ body {
 .searchbox {
     width: 100%;
     max-width: 564px;
+    margin-top: -10px;
+    border: 1px solid white;
+    float: left;
+    margin-top: 4px;
+    margin-bottom: 3px;
+}
+
+hr {
+    color: #E8E8E8;
+}
+
+.searchicon {
+    background-color: white;
+    height: 38px;
+    margin-top: 4px;
 }
 
 .searchbar {
     height: 36px;
     font-size: 14px;
     width: 100%;
-    background-image: url('img/searchicon.png');
-    background-position: 530px 10px;
-    background-repeat: no-repeat;
-    background-size: 25px;
+    border: 0px solid white;
+    outline: none;
 }
 
 .category {
@@ -159,6 +171,9 @@ body {
     font-weight: 500;
     margin-top: 0px;
     text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .productinfo {

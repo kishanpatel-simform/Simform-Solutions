@@ -1,0 +1,145 @@
+<html>
+
+<head>
+    <title>
+        JavaScript Tutorial
+    </title>
+</head>
+
+<body>
+
+
+    <p>This is JavaScript File</p>
+
+    <!-- Inner HTML -->
+
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML = 5 + 6;
+    </script>
+
+    <!-- Document Write -->
+
+    <script>
+        document.write(5 + 6);
+    </script>
+
+    <!-- Window Alert -->
+
+    <script>
+        window.alert(5 + 6);
+    </script>
+
+    <!-- Console Log -->
+
+    <script>
+        // This is Comment
+        /*
+        This is Multi line Comment
+         */
+        console.log(5 + 6);
+    </script>
+
+    <!-- JavaScript Print -->
+
+    <button onclick="window.print()">Print this page</button>
+
+    <!-- JavaScript var Variable -->
+
+    <p id="cvalue"></p>
+    <script>
+        var a = 10;
+        var b = 2;
+        var c = a + b;
+        document.getElementById('cvalue').innerHTML = "The Value of c is " + c + " using var";
+    </script>
+
+
+    <!-- JavaScript let Variable -->
+
+    <p id="letcvalue"></p>
+    <script>
+        let a1 = 10;
+        let b1 = 2;
+        let c1 = a1 + b1;
+        document.getElementById('letcvalue').innerHTML = "The Value of c1 is " + c1 + " using let";
+    </script>
+
+
+    <!-- JavaScript const Variable -->
+
+    <p id="constcvalue"></p>
+    <script>
+        const a11 = 10;
+        const b11 = 2;
+        const c11 = a11 + b11;
+        document.getElementById('constcvalue').innerHTML = "The Value of c11 is " + c11 + " using Const";
+    </script>
+
+    <!-- JavaScript Functions -->
+
+    <p id="constcvalue"></p>
+    <script>
+        function addition(a, b) {
+            return a + b;
+        }
+
+        document.getElementById('constcvalue').innerHTML = "Addition of 10 & 20 is " + addition(10, 20) + " using Function";
+    </script>
+
+    <!-- JavaScript Objects -->
+
+    <p id="carvalue"></p>
+    <p id="carvaluedetail"></p>
+    <script>
+        const car = {
+            carname: "Rolls Royce Culinan",
+            color: "Orange",
+            speed: "400 KM/H",
+            owner: "Kishan Patel",
+            cardata: function() {
+                return "The Car " + this.carname + " whose color is " + this.color + " has a speed of " + this.speed +
+                    " is owned by " + this.owner;
+            }
+        };
+
+        document.getElementById('carvalue').innerHTML = "The Car " + car.carname + " whose color is " + car.color + " has a speed of " + car.speed +
+            " is owned by " + car.owner;
+        document.getElementById('carvaluedetail').innerHTML = car.cardata() + " (Using Method)";
+    </script>
+
+    <!-- HTML Events -->
+    <button onclick="alert('You clicked Me');">Click Me</button>
+    <button onmouseover="alert('Mouse Over Me');">Mouse Over Me</button>
+    <button onmouseout="alert('Mouse is out from Me');">Mouse Out from Me</button>
+
+    <!-- String Functions -->
+    <p id="textlength"></p>
+    <p id="textslice"></p>
+
+    <script>
+        let text = "KishanPatel";
+        document.getElementById("textlength").innerHTML = "Text Length is " + text.length;
+
+        let str = "Apple, Banana, Kiwi";
+        let part = str.slice(7, 13);
+        document.getElementById("textslice").innerHTML = "Text Slice is " + part;
+    </script>
+
+    <!-- JavaScript Array -->
+
+    <p id="jsarray"></p>
+    <p id="jsarraysort"></p>
+    <p id="jsarrayreverse"></p>
+
+    <script>
+        const cars = ["Rolls Royce", "Volvo", "BMW"];
+        document.getElementById("jsarray").innerHTML = cars;
+        cars.sort();
+        document.getElementById("jsarraysort").innerHTML = cars;
+        cars.reverse();
+        document.getElementById("jsarrayreverse").innerHTML = cars;
+    </script>
+</body>
+
+</html>

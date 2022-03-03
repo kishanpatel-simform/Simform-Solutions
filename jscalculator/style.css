@@ -1,0 +1,43 @@
+.table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: auto;
+    height: auto;
+    background-color: #f2f2f2;
+}
+
+.table td {
+    height: auto;
+    width: auto;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0px;
+    float: left;
+}
+
+.table td button {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    border: 0px solid;
+}
+
+#val1 {
+    border: 0px solid black;
+    font-size: 20px;
+    text-decoration: none;
+    width: 250px;
+    background-color: #f2f2f2;
+}
+
+#val1:focus {
+    outline: none
+}
+
+.whitebg {
+    background-color: white;
+}
+
+.greybg {
+    background-color: #f2f2f2;
+}

@@ -8,6 +8,12 @@
 
 <body>
 
+    <!-- JavaScript "Use Strict" -->
+    <script>
+        "use strict";
+        x = 3.14; // This will cause an error (x is not defined).
+    </script>
+
 
     <p>This is JavaScript File</p>
 
@@ -114,6 +120,7 @@
     <button onmouseout="alert('Mouse is out from Me');">Mouse Out from Me</button>
 
     <!-- String Functions -->
+
     <p id="textlength"></p>
     <p id="textslice"></p>
 
@@ -140,6 +147,170 @@
         cars.reverse();
         document.getElementById("jsarrayreverse").innerHTML = cars;
     </script>
+
+    <!-- End of JavaScript Array -->
+
+    <!-- JavaScript Sets -->
+
+    <p id="jssets"></p>
+    <p id="jssets1"></p>
+    <p id="jssetsdata"></p>
+
+    <script>
+        // Create a Set
+        const letters = new Set(["a", "b", "c"]);
+
+        // Display set.size
+        document.getElementById("jssets").innerHTML = letters.size;
+        letters.add("d");
+        letters.add("e");
+        document.getElementById("jssets1").innerHTML = letters.size;
+        let data = "";
+        for (const y1 of letters.values()) {
+
+            data += y1 + "<br/>";
+        }
+        document.getElementById("jssetsdata").innerHTML = "The elements in set are " + data;
+    </script>
+
+    <!-- End of JavaScript Sets -->
+
+
+    <!-- JavaScript Maps -->
+
+    <p id="jsmap"></p>
+    <p id="jsmapmango"></p>
+    <p id="jsmapdata"></p>
+
+    <script>
+        // Create a Map
+        const fruits = new Map([
+            ["apples", 500],
+            ["bananas", 300],
+            ["oranges", 200]
+        ]);
+
+        document.getElementById("jsmap").innerHTML = fruits.get("apples");
+        fruits.set("mango", 800);
+        document.getElementById("jsmapmango").innerHTML = fruits.get("mango");
+
+        let data1 = "";
+        for (const z1 of fruits.entries()) {
+            data1 += z1 + "<br/>";
+        }
+        document.getElementById("jsmapdata").innerHTML = "The elements in Map are " + data1;
+    </script>
+
+    <!-- End of JavaScript Map -->
+
+    <!-- JavaScript TypeOf -->
+
+    <p id="jstypeof"></p>
+    <script>
+        document.getElementById("jsmapdata").innerHTML = typeof "Kishan Patel" + "<br/>" +
+            typeof 3.18 + "<br/>";
+    </script>
+
+    <!-- End of JavaScript TypeOf -->
+
+    <!-- JavaScript Errors -->
+
+    <p id="jserror"></p>
+
+    <script>
+        try {
+            adddlert("Welcome guest!");
+        } catch (err) {
+            document.getElementById("jserror").innerHTML = err.message;
+        }
+    </script>
+
+    <!-- End of JavaScript Errors -->
+
+    <!-- JavaScript Hoisting -->
+
+    <p id="jshoisting"></p>
+
+    <script>
+        x = 5; // Assign 5 to x
+
+        elem = document.getElementById("jshoisting"); // Find an element 
+        elem.innerHTML = x; // Display x in the element
+
+        var x; // Declare x
+    </script>
+
+    <!-- End of JavaScript Hoisting -->
+
+    <!-- JavaScript Arrow Functions -->
+
+    <p id="jsarrow"></p>
+
+    <script>
+        var hello;
+
+        hello = () => "Hey, I am Kishan Patel. This is example to show usage of Arrow Function";
+
+        document.getElementById("jsarrow").innerHTML = hello();
+    </script>
+
+    <!-- End of JavaScript Arrow Functions -->
+
+    <!-- JavaScript Classes -->
+
+    <p id="jsclass"></p>
+    <script>
+        class Cars {
+            constructor(name, owner) {
+                this.name = name;
+                this.owner = owner;
+            }
+            details() {
+                let purchaseyear = "2021";
+                return purchaseyear;
+            }
+        }
+
+        const car1 = new Cars("Rolls Royce", "Kishan Patel");
+        document.getElementById("jsclass").innerHTML = car1.name + " is owned by " + car1.owner + ". He had purchased on " + car1.details();
+    </script>
+
+    <!-- End of JavaScript Classes -->
+
+    <!-- JavaScript Modules -->
+
+    <p id="jsmodule"></p>
+
+    <script type="module">
+        import { name1, owner1 } from "./car.js"; document.getElementByid("jsmodule").innerHTML = "The Car" + name1 + " is owned by " + owner1;
+    </script>
+
+    <!-- End of JavaScript Modules -->
+
+    <!-- JavaScript JSON-->
+
+    <p id="jsjson"></p>
+    <p id="jsjson1"></p>
+    <p id="jsjson2"></p>
+
+    <script>
+        let text1 = '{"employees":[' +
+            '{"firstName":"Kishan","lastName":"Patel" },' +
+            '{"firstName":"Jaymin","lastName":"Prajapati" },' +
+            '{"firstName":"Yash","lastName":"Patel" }]}';
+
+        const obj1 = JSON.parse(text1);
+        document.getElementById("jsjson").innerHTML =
+            obj1.employees[0].firstName + " " + obj1.employees[0].lastName;
+
+        document.getElementById("jsjson1").innerHTML =
+            obj1.employees[1].firstName + " " + obj1.employees[1].lastName;
+        document.getElementById("jsjson2").innerHTML =
+            obj1.employees[2].firstName + " " + obj1.employees[2].lastName;
+    </script>
+
+    <!-- End of JavaScript JSON -->
+
 </body>
 
 </html>

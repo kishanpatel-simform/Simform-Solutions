@@ -9,13 +9,13 @@
 <body>
 
     <!-- JavaScript "Use Strict" -->
+
     <script>
         "use strict";
         x = 3.14; // This will cause an error (x is not defined).
     </script>
 
-
-    <p>This is JavaScript File</p>
+    <!-- End of JavaScript "Use Strict" -->
 
     <!-- Inner HTML -->
 
@@ -24,17 +24,23 @@
         document.getElementById("demo").innerHTML = 5 + 6;
     </script>
 
+    <!-- End of Inner HTMl -->
+
     <!-- Document Write -->
 
     <script>
         document.write(5 + 6);
     </script>
 
+    <!-- End of Document Write -->
+
     <!-- Window Alert -->
 
     <script>
         window.alert(5 + 6);
     </script>
+
+    <!-- End of Window Alert -->
 
     <!-- Console Log -->
 
@@ -46,9 +52,13 @@
         console.log(5 + 6);
     </script>
 
+    <!-- End of Console Log -->
+
     <!-- JavaScript Print -->
 
     <button onclick="window.print()">Print this page</button>
+
+    <!-- End of JavaScript Print -->
 
     <!-- JavaScript var Variable -->
 
@@ -60,6 +70,7 @@
         document.getElementById('cvalue').innerHTML = "The Value of c is " + c + " using var";
     </script>
 
+    <!-- End of JavaScript var Variable -->
 
     <!-- JavaScript let Variable -->
 
@@ -71,6 +82,7 @@
         document.getElementById('letcvalue').innerHTML = "The Value of c1 is " + c1 + " using let";
     </script>
 
+    <!-- End of JavaScript let Variable -->
 
     <!-- JavaScript const Variable -->
 
@@ -82,6 +94,8 @@
         document.getElementById('constcvalue').innerHTML = "The Value of c11 is " + c11 + " using Const";
     </script>
 
+    <!-- End of JavaScript const variable -->
+
     <!-- JavaScript Functions -->
 
     <p id="constcvalue"></p>
@@ -92,6 +106,8 @@
 
         document.getElementById('constcvalue').innerHTML = "Addition of 10 & 20 is " + addition(10, 20) + " using Function";
     </script>
+
+    <!-- End of JavaScript Functions -->
 
     <!-- JavaScript Objects -->
 
@@ -114,10 +130,15 @@
         document.getElementById('carvaluedetail').innerHTML = car.cardata() + " (Using Method)";
     </script>
 
+    <!-- End of JavaScript Objects -->
+
     <!-- HTML Events -->
+
     <button onclick="alert('You clicked Me');">Click Me</button>
     <button onmouseover="alert('Mouse Over Me');">Mouse Over Me</button>
     <button onmouseout="alert('Mouse is out from Me');">Mouse Out from Me</button>
+
+    <!-- End of HTML Events -->
 
     <!-- String Functions -->
 
@@ -132,6 +153,8 @@
         let part = str.slice(7, 13);
         document.getElementById("textslice").innerHTML = "Text Slice is " + part;
     </script>
+
+    <!-- End of String Functions -->
 
     <!-- JavaScript Array -->
 
@@ -174,7 +197,6 @@
     </script>
 
     <!-- End of JavaScript Sets -->
-
 
     <!-- JavaScript Maps -->
 
@@ -310,6 +332,245 @@
     </script>
 
     <!-- End of JavaScript JSON -->
+
+    <!-- JavaScript Iterables -->
+
+    <p id="jsiterables"></p>
+    <script>
+        const name = "Kishan Patel";
+        let data2 = "";
+        for (const temp of name) {
+            data2 += temp;
+        }
+        document.getElementById('jsiterables').innerHTML = data2;
+    </script>
+
+    <!-- End of JavaScript Iterables -->
+
+    <!-- JavaScript Argument Objects -->
+
+    <p id="jsargumentobject"></p>
+    <script>
+        data3 = display(1, 2, 3, 4, 5, 6, 7, 8, 9);
+
+
+        function display() {
+            let text2 = "";
+            for (let i = 0; i < arguments.length; i++) {
+                text2 += arguments[i];
+            }
+            return text2;
+        }
+        document.getElementById('jsargumentobject').innerHTML = data3;
+    </script>
+
+    <!-- End of JavaScript Argument Objects -->
+
+    <!-- Function Call -->
+
+    <p id="jsfunctioncall"></p>
+    <script>
+        const car2 = {
+            owner: function(year) {
+                return this.name + " is owned by " + this.owner + " He has purchased on " + year;
+            }
+        }
+        const cardetail = {
+            name: "Rolls Royce",
+            owner: "Kishan Patel"
+        }
+        document.getElementById('jsfunctioncall').innerHTML = car2.owner.call(cardetail, 2021);
+    </script>
+
+    <!-- End of Function Call -->
+
+    <!-- Function Apply -->
+
+    <p id="jsfunctionapply1"></p>
+    <p id="jsfunctionapply2"></p>
+    <script>
+        const car3 = {
+            owner: function(year) {
+                return this.name + " is owned by " + this.owner + " He has purchased on " + year;
+            }
+        }
+        const cardetail1 = {
+            name: "Rolls Royce",
+            owner: "Kishan Patel"
+        }
+        const cardetail2 = {
+            name: "Mercedes",
+            owner: "Kishan Patel"
+        }
+        document.getElementById('jsfunctionapply1').innerHTML = car3.owner.apply(cardetail1, ['2021']);
+        document.getElementById('jsfunctionapply2').innerHTML = car3.owner.apply(cardetail2, ['2021']);
+    </script>
+
+    <!-- End of Function Apply -->
+
+    <!-- Function Bind -->
+
+    <p id="jsfunctionbind"></p>
+
+    <script>
+        const car4 = {
+            name: "Rolls Royce",
+            ownername: "Kishan Patel",
+            owner: function() {
+                let z = document.getElementById('jsfunctionbind');
+                z.innerHTML = this.name + " is owned by " + this.ownername;
+            }
+        }
+
+        let owner = car4.owner.bind(car4);
+        setTimeout(owner, 3000);
+    </script>
+
+    <!-- End of Function Bind -->
+
+    <!-- JavaScript Closure -->
+
+    <button type="button" onclick="clapmefunc()">Clap</button>
+    <p id="jsclosure"></p>
+    <script>
+        const clapme = (function() {
+            let hit = 0;
+            return function() {
+                hit += 1;
+                return hit;
+            }
+
+        })();
+
+        function clapmefunc() {
+            document.getElementById('jsclosure').innerHTML = clapme();
+        }
+    </script>
+
+    <!-- End of JavaScript Closure -->
+
+    <!-- JavaScript Class Inheritance -->
+
+    <p id="jsinheritance"></p>
+    <script>
+        class car5 {
+            constructor(car5name) {
+                this.car5name = car5name;
+            }
+            display() {
+                return car5name + " is owned by ";
+            }
+        }
+        class car5data extends car5 {
+            constructor(car5name, ownername) {
+                super(car5name);
+                this.ownername = ownername;
+            }
+            display() {
+                return this.display() + this.ownername;
+            }
+        }
+        let cardetail3 = new car5data("Rolls Royce", "Kishan Patel");
+        document.getElementById('jsinheritance').innerHTML = cardetail3.display();
+    </script>
+
+    <!-- End of JavaScript Class Inheritance -->
+
+    <!-- JavaScript Static Method in Class -->
+
+    <p id="jsstatic"></p>
+    <script>
+        class car6 {
+            constructor(name, owner) {
+                this.name = name;
+                this.owner = owner;
+            }
+            static display(z) {
+                return z.name + " is owned by " + z.owner + ".He had purchased on 2021";
+            }
+        }
+        let carobj = new car6("Rolls Royce", "Kishan Patel");
+        document.getElementById('jsstatic').innerHTML = car6.display(carobj);
+    </script>
+
+    <!-- End of JavaScript Static Method in Class -->
+
+    <!-- JavaScript Asynchronous -->
+
+    <p id="jsdisplayaboutme"></p>
+    <script>
+        setTimeout(displayaboutme, 3000);
+
+        function displayaboutme() {
+            document.getElementById("jsdisplayaboutme").innerHTML = "Rolls Royce is owned by Kishan Patel";
+        }
+    </script>
+
+    <!-- End of JavaScript Asynchronous -->
+
+    <!-- JavaScript Promise -->
+
+    <p id="jspromise"></p>
+    <script>
+        function displaydata(displaydatacontent) {
+            document.getElementById('jspromise').innerHTML = displaydatacontent;
+        }
+        let myPromise = new Promise(function(myResolve, myReject) {
+            let x = 0;
+            if (x == 0) {
+                myResolve("OK");
+            } else {
+                myReject("Error");
+            }
+        });
+        myPromise.then(
+            function(value) {
+                displaydata(value);
+            },
+            function(error) {
+                displaydata(error);
+            }
+        );
+    </script>
+
+    <!-- End of JavaScript Promise -->
+
+    <!-- JavaScript Async -->
+
+    <p id="jsasync"></p>
+    <script>
+        function displaydata1(getdata) {
+            document.getElementById('jsasync').innerHTML = getdata;
+        }
+        async function myfunc() {
+            return 'Kishan Patel';
+        }
+        myfunc().then(
+            function(value) {
+                displaydata1(value);
+            },
+            function(error) {
+                displaydata1(error);
+            }
+        );
+    </script>
+
+    <!-- End of JavaScript Async -->
+
+    <!-- JavaScript Await -->
+
+    <p id="jsawait"></p>
+    <script>
+        async function myFunction() {
+            let myPromise1 = new Promise(function(resolve, reject) {
+                resolve('My Name is Kishan Patel');
+            });
+            document.getElementById('jsawait').innerHTML = await myPromise1;
+        }
+        myFunction();
+    </script>
+
+    <!-- End of JavaScript Await -->
 
 </body>
 

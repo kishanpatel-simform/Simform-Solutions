@@ -572,6 +572,180 @@
 
     <!-- End of JavaScript Await -->
 
+    <!-- JavaScript DOM Events -->
+
+    <div onmouseover="changered(this)" onmouseout="changegreen(this)" style="height:300px;width:300px;background-color: blue;">
+        This is Text Box
+    </div>
+    <script>
+        function changered(obj) {
+
+            obj.style.backgroundColor = "red";
+        }
+
+        function changegreen(obj) {
+
+            obj.style.backgroundColor = "green";
+        }
+    </script>
+
+    <!-- JavaScript DOM Events -->
+
+    <!-- JavaScript Event Listener -->
+
+    <br/>
+    <button id="eventlistener">Click Me!</button>
+    <script>
+        document.getElementById("eventlistener").addEventListener("click", function() {
+            alert("You Clicked Me");
+        });
+    </script>
+
+    <!-- End of JavaScript Event Listener -->
+
+    <!-- JavaScript DOM Nodes -->
+
+    <div id="domnodes">
+        <p>This is Text One</p>
+        <p>This is another Text</p>
+    </div>
+    <script>
+        const para = document.createElement("p");
+        const text6 = document.createTextNode("This is Text Node");
+        para.appendChild(text6);
+
+        document.getElementById("domnodes").appendChild(para);
+    </script>
+
+    <!-- End of JavaScript DOM Nodes -->
+
+    <p id="screenwidth"></p>
+    <script>
+        document.getElementById("screenwidth").innerHTML = "Width of current screen is " + screen.width + " and height is " + screen.height +
+            " and Screen pixel Depth is " + screen.pixelDepth + " and Color Depth is " + screen.colorDepth;
+    </script>
+
+    <!-- JavaScript Window Screen -->
+
+    <!-- JavaScript Location -->
+
+    <p id="jslocation"></p>
+    <p id="jshostname"></p>
+    <script>
+        document.getElementById("jslocation").innerHTML = "Location of Page is " + window.location.href;
+        document.getElementById("jshostname").innerHTML = "Host Name is " + window.location.hostname;
+    </script>
+
+    <!-- End of JavaScript Location -->
+
+    <!-- JavaScript Window History -->
+
+    <input type="button" value="Go Back " onclick="goback()">
+    <script>
+        function goback() {
+            window.history.back()
+        }
+    </script>
+
+    <!-- End of JavaScript Window History -->
+
+    <!-- JavaScript Navigator -->
+
+    <p id="navigator"></p>
+    <p id="navigator2"></p>
+    <p id="navigator3"></p>
+    <script>
+        document.getElementById("navigator").innerHTML = "Cookie Enabled Status is " + window.navigator.cookieEnabled;
+        document.getElementById("navigator2").innerHTML = "Application Browser Name is " + window.navigator.appName;
+        document.getElementById("navigator2").innerHTML = "Code Name is " + window.navigator.appCodeName;
+    </script>
+
+    <!-- End of JavaScript Navigator -->
+
+    <!-- JavaScript PopUp Alert -->
+
+    <button onclick="alert('Hey!, I am kishan')">Alert PopUp</button>
+    <button onclick="prompt('Are you a Robot')">Prompt PopUp</button>
+    <button onclick="checkconfirm()">Confirm PopUp</button>
+    <script>
+        function checkconfirm() {
+            var txt;
+            if (confirm("Do you want to confirm your order")) {
+                txt = "You have confirmed your order";
+            } else {
+                txt = "You have cancelled your order";
+            }
+            document.getElementById("jsconfirm").innerHTML = txt;
+        }
+    </script>
+    <p id="jsconfirm"></p>
+
+    <!-- End of JavaScript PopUp Alert -->
+
+    <!-- JavaScript Timing -->
+
+    <p id="jstiming"></p>
+    <script>
+        let showtime = setInterval(showTimenow, 1000);
+
+        function showTimenow() {
+            const d = new Date();
+            document.getElementById("jstiming").innerHTML = d.toLocaleDateString();
+        }
+    </script>
+
+    <!-- End of JavaScript Timing -->
+
+    <!-- JavaScript Web Storage API -->
+
+    <p id="jswebstorageapi"></p>
+    <script>
+        localStorage.setItem("name", "Kishan Patel");
+        document.getElementById("jswebstorageapi").innerHTML = localStorage.getItem("name");
+    </script>
+
+    <!-- End of JavaScript Web Storage API -->
+
+    <!-- JavaScript GeoLocation -->
+
+    <p id="jsgeolocation"></p>
+    <button onclick="getLocation()">Get My Location</button>
+    <script>
+        const x1 = document.getElementById("jsgeolocation");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x1.innerHTML = "GeoLocation is not supported";
+            }
+        }
+
+
+        function showPosition(position) {
+            x1.innerHTML = "Latitude: " + position.coords.latitude + "Longitude: " + position.coords.longitude;
+        }
+    </script>
+
+    <!-- End of JavaScript GeoLocation -->
+
+    <!-- JavaScript AJAX -->
+
+    <p id="jsajax"></p>
+    <button onclick="loaddata()">Get Content</button>
+    <script>
+        function loaddata() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                document.getElementById("jsajax").innerHTML = this.responseText;
+            }
+            xhttp.open("GET", "demo.txt");
+            xhttp.send();
+        }
+    </script>
+
+    <!-- End of JavaScript Ajax -->
+
 </body>
 
 </html>

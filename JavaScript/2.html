@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <title>JavaScript Cookies</title>
+
+    <!-- JavaScript Cookies -->
+
+    <script>
+        function checkcookie() {
+            let name = getCookie("username");
+            if (name != "") {
+                alert("Welcome " + name);
+            } else {
+                name = prompt("Enter your Name");
+                if (name != "" && name != null) {
+                    setCookie("username", name, 30);
+                }
+            }
+        }
+
+        function setCookie(name, value, expire) {
+            const d = new Date();
+            d.setTime(d.getTime() + (expire * 24 * 60 * 60 * 1000));
+            let expires = "expires = " + d.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";paths=/";
+        }
+
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == '') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+    </script>
+
+    <!-- End of JavaScript Cookies -->
+</head>
+
+<body onload="checkcookie()">
+    This is Example of JavaScript Cookies
+</body>
+
+</html>

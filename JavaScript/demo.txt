@@ -1,0 +1,2 @@
+Hi
+I am Kishan Patel. This is sample file to check working of AJAX.

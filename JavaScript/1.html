@@ -746,6 +746,76 @@
 
     <!-- End of JavaScript Ajax -->
 
+    <!-- JSON Parse -->
+
+    <p id="jsonparse"></p>
+    <script>
+        const data4 = '{"name":"Kishan Patel","age":21,"car":"Rolls Royce"}';
+        const obj2 = JSON.parse(data4);
+        document.getElementById("jsonparse").innerHTML = "My name is " + obj2.name + ". My age is " +
+            obj2.age + ". I am having " + obj2.car;
+    </script>
+
+    <!-- End of JSON Parse -->
+
+    <!-- JSON Stringify -->
+
+    <p id="jsonstringify"></p>
+    <script>
+        const obj3 = {
+            name: "Kishan Patel",
+            age: 21,
+            car: "Rolls Royce"
+        };
+        const myJson = JSON.stringify(obj3);
+        document.getElementById("jsonstringify").innerHTML = myJson;
+    </script>
+
+    <!-- End of JSON Stringify -->
+
+    <!-- JS Canvas -->
+
+    <canvas id="myCanvas" width="400" height="400" style="border:1px solid grey"></canvas>
+
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        canvas.height = canvas.width;
+        ctx.transform(1, 0, 0, -1, 0, canvas.height)
+
+        let xMax = canvas.height;
+        let yMax = canvas.width;
+        let slope = 1.2;
+        let intercept = 70;
+
+        const xArray = [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150];
+        const yArray = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15];
+
+        // Plot Scatter
+        ctx.fillStyle = "red";
+        for (let i = 0; i < xArray.length - 1; i++) {
+            let x = xArray[i] * xMax / 150;
+            let y = yArray[i] * yMax / 15;
+            ctx.beginPath();
+            ctx.ellipse(x, y, 3, 3, 0, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        // Plot Line
+        ctx.moveTo(0, intercept);
+        ctx.lineTo(xMax, f(xMax));
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+
+        // Line Function<br>
+        function f(x) {
+            return x * slope + intercept;
+        }
+    </script>
+
+    <!-- End of JS Canvas -->
+
 </body>
 
 </html>

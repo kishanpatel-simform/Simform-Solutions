@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <center>
+        <table class="table">
+            <tr>
+                <td colspan="5">
+                    <p id="inputdata"></p>
+                </td>
+
+
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <input id="val1" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td><button onclick="singleinputoperation('deg')" class="bggrey">DEG</button></td>
+                <td><button class="bggrey">F-E</button></td>
+                <td colspan="3"></td>
+
+            </tr>
+            <tr>
+                <td><button class="bggrey" style="opacity: 0.4;">MC</button></td>
+                <td><button class="bggrey" style="opacity: 0.4;">MR</button></td>
+                <td><button class="bggrey">M+</button></td>
+                <td><button class="bggrey">M-</button></td>
+                <td><button class="bggrey">MS</button></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <span style="margin-left:5px;">&#x22BF;</span>
+                    <Select style="font-size: 10px;">
+                    <option>Trigonometry</option>
+                    <option onclick="singleinputoperation('acos')">Acos</option>
+                    <option onclick="singleinputoperation('acosh')">Acosh</option>
+                    <option onclick="singleinputoperation('asin')">Asin</option>
+                    <option onclick="singleinputoperation('asinh')">Asinh</option>
+                    <option onclick="singleinputoperation('atan')">Atan</option>
+                    <option onclick="singleinputoperation('atanh')">Atanh</option>
+                    <option onclick="singleinputoperation('cos')">Cos</option>
+                    <option onclick="singleinputoperation('cosh')">Cosh</option>
+                    <option onclick="singleinputoperation('sin')">Sin</option>
+                    <option onclick="singleinputoperation('sinh')">Sinh</option>
+                    <option onclick="singleinputoperation('tan')">Tan</option>
+                    <option onclick="singleinputoperation('tanh')">Tanh</option>
+                  </Select>
+                </td>
+
+
+                <td colspan="2">
+
+                    <span style="margin-left:16px;">  &#x192;</span>
+                    <Select style="font-size: 10px;">
+                 <option>Functions</option>
+               </Select>
+                </td>
+
+            </tr>
+            <tr>
+                <td><button class="greybg">2<sup>nd</sup></button></td>
+                <td><button class="greybg" onclick="insertpi()">&pi;</button></td>
+                <td><button class="greybg">e</button></td>
+                <td><button class="greybg" onclick="reset()">C</button></td>
+                <td><button class="greybg" onclick="erase()">&#8592;</button></td>
+            </tr>
+            <tr>
+                <td><button class="greybg" onclick="singleinputoperation('xraise2')">x<sup>2</sup></button></td>
+                <td><button class="greybg" onclick="singleinputoperation('onebyx')">1/x</button></td>
+                <td><button class="greybg">|x|</button></td>
+                <td><button class="greybg" onclick="passoperand('exp')">exp</button></td>
+                <td><button class="greybg" onclick="passoperand('mod')">mod</button></td>
+            </tr>
+            <tr>
+                <td><button class="greybg" onclick="singleinputoperation('tworootx')">2&#8730;x</button></td>
+                <td><button class="greybg">(</button></td>
+                <td><button class="greybg">)</button></td>
+                <td><button class="greybg" onclick="singleinputoperation('factorial')">n!</button></td>
+                <td><button class="greybg" onclick="passoperand('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button class="greybg" onclick="passoperand('x^y')">x<sup>y</sup></button></td>
+                <td><button class="whitebg" onclick="passnumber(7)">7</button></td>
+                <td><button class="whitebg" onclick="passnumber(8)">8</button></td>
+                <td><button class="whitebg" onclick="passnumber(9)">9</button></td>
+                <td><button class="greybg" onclick="passoperand('*')">X</button></td>
+            </tr>
+            <tr>
+                <td><button class="greybg" onclick="singleinputoperation('10raisex')">10<sup>x</sup></button></td>
+                <td><button class="whitebg" onclick=" passnumber(4) ">4</button></td>
+                <td><button class="whitebg" onclick="passnumber(5) ">5</button></td>
+                <td><button class="whitebg" onclick="passnumber(6) ">6</button></td>
+                <td><button class="greybg" onclick="passoperand( '-') ">-</button></td>
+            </tr>
+            <tr>
+                <td><button class="greybg" onclick="passoperand('log')">log</button></td>
+                <td><button class="whitebg" onclick="passnumber(1) ">1</button></td>
+                <td><button class="whitebg" onclick="passnumber(2) ">2</button></td>
+                <td><button class="whitebg" onclick="passnumber(3) ">3</button></td>
+                <td><button class="greybg" onclick="passoperand( '+') ">+</button></td>
+            </tr>
+            <tr>
+                <td><button class="greybg">ln</button></td>
+                <td><button class="whitebg">+/-</button></td>
+                <td><button class="whitebg" onclick="passnumber(0) ">0</button></td>
+                <td><button class="whitebg" onclick="passnumber( '.') ">.</button></td>
+                <td><button class="greybg" onclick="getanswer( '=') ">=</button></td>
+            </tr>
+        </table>
+
+        <h2>Made by Kishan Patel <span style="color:red;">&#10084;</span></h2>
+        <h3>Calculator</h3>
+    </center>
+
+</body>
+
+</html>

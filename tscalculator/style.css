@@ -1,0 +1,67 @@
+.table {
+    border: 1px solid f2f2f2;
+    border-collapse: collapse;
+    width: auto;
+    height: auto;
+    background-color: #f2f2f2;
+    margin-top: 10%;
+}
+
+.inputdata {
+    max-width: 350px;
+    word-wrap: normal;
+}
+
+.table td {
+    height: auto;
+    width: auto;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0px;
+    float: left;
+}
+
+.table td button {
+    height: 50px;
+    width: 60px;
+    text-align: center;
+    border: 0px solid;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.table td button:active {
+    transform: translateY(4px);
+}
+
+#val1 {
+    border: 0px solid black;
+    font-size: 35px;
+    text-decoration: none;
+    max-width: 305px;
+    background-color: #f2f2f2;
+}
+
+#val1:focus {
+    outline: none
+}
+
+.whitebg {
+    background-color: white;
+    font-weight: bold;
+}
+
+.greybg {
+    background-color: #f8f8f8;
+}
+
+select {
+    background-color: #f2f2f2;
+    height: 25px;
+    font-size: 15px;
+    border: 0px solid;
+}
+
+.bggrey {
+    background-color: #f2f2f2;
+}

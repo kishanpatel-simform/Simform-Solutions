@@ -1,36 +1,43 @@
-var input;
+var input:number;
 var operation = "";
-var input1;
-window.addEventListener("load", reset);
+var input1:number;
+
+window.addEventListener("load",reset);
 function reset() {
     input = 0;
     operation = "";
     input1 = 0;
-    var greeter = document.getElementById("val1");
+    let greeter:HTMLInputElement = document.getElementById("val1") as HTMLInputElement;
     greeter.value = "";
-    var greeter2 = document.getElementById("inputdata");
-    greeter2.innerHTML = "";
+    let greeter2:HTMLParagraphElement = document.getElementById("inputdata") as HTMLParagraphElement;
+    greeter2.innerHTML = "";    
+
 }
-function passnumber(no) {
-    input = +document.getElementById('val1').value;
-    document.getElementById('val1').value = (input.toString() + no);
+function passnumber(no:number) {
+
+    input = +(<HTMLInputElement>document.getElementById('val1')).value;
+    (<HTMLInputElement>document.getElementById('val1')).value = (input.toString() + no);
 }
 function passoperand(operand) {
-    input1 = +document.getElementById('val1').value;
+
+    input1 = +(<HTMLInputElement>document.getElementById('val1')).value;
     try {
-        if (input1.toString() == " ")
-            throw "Enter Input Values";
-        var greeter = document.getElementById("inputdata");
+
+        if (input1.toString() == " ") throw "Enter Input Values";
+
+        let greeter:HTMLInputElement = document.getElementById("inputdata") as HTMLInputElement;
         greeter.innerHTML = input1 + operand;
         operation = operand;
-        document.getElementById('val1').value = '';
-    }
-    catch (err) {
+        (<HTMLInputElement>document.getElementById('val1')).value= '';
+    } catch (err) {
         alert(err);
     }
+
 }
 function insertpi() {
-    document.getElementById('val1').value = (22 / 7).toString();
+   
+    (<HTMLInputElement>document.getElementById('val1')).value = (22/7).toString();
+   
 }
 function erase() {
     /*input = +(<HTMLInputElement>document.getElementById('val1')).value
@@ -38,56 +45,58 @@ function erase() {
     (<HTMLInputElement>document.getElementById('val1')).value = input;
 */
 }
+
 function Factorial(n) {
     if (n === 0) {
         return 1;
-    }
-    else {
+    } else {
         return n * Factorial(n - 1);
     }
 }
+
 function getanswer() {
     try {
-        input = +document.getElementById('val1').value;
+        input =  +(<HTMLInputElement>document.getElementById('val1')).value;
         input = (input);
         input1 = (input1);
-        var greeter3 = document.getElementById("inputdata");
+
+        let greeter3:HTMLParagraphElement = document.getElementById("inputdata") as HTMLParagraphElement;
         greeter3.innerHTML = input1 + operation + input;
-        if (input1.toString() == '')
-            throw "Enter Input Values";
-        if (input.toString() == '')
-            throw "Enter Input Values";
+    
+        if (input1.toString() == '') throw "Enter Input Values";
+        if (input.toString() == '') throw "Enter Input Values";
+      
         switch (operation) {
             case "+":
-                document.getElementById('val1').value = (input1 + input).toString();
+                (<HTMLInputElement>document.getElementById('val1')).value = (input1 + input).toString();
                 break;
             case "-":
-                document.getElementById('val1').value = (input1 - input).toString();
+                (<HTMLInputElement>document.getElementById('val1')).value = (input1 - input).toString();
                 break;
             case "*":
-                document.getElementById('val1').value = (input1 * input).toString();
+                (<HTMLInputElement>document.getElementById('val1')).value = (input1 * input).toString();
                 break;
             case "/":
-                document.getElementById('val1').value = (input1 / input).toString();
+                (<HTMLInputElement>document.getElementById('val1')).value = (input1 / input).toString();
                 break;
             case "mod":
-                document.getElementById('val1').value = (input1 % input).toString();
+                (<HTMLInputElement>document.getElementById('val1')).value = (input1 % input).toString();
                 break;
             case "exp":
-                document.getElementById('val1').value = (Math.pow(input1, input)).toString();
+                (<HTMLInputElement>document.getElementById('val1')).value = (input1 ** input).toString();
                 break;
             case "x^y":
-                document.getElementById('val1').value = (Math.pow(input1, input)).toString();
+                (<HTMLInputElement>document.getElementById('val1')).value = (input1 ** input).toString();
                 break;
             case "log":
-                document.getElementById('val1').value = (Math.log(input) / Math.log(input1)).toString();
+                (<HTMLInputElement>document.getElementById('val1')).value = (Math.log(input) / Math.log(input1)).toString();
                 break;
         }
-    }
-    catch (err) {
+    } catch (err) {
         alert(err);
     }
 }
+
 /*
 
 function singleinputoperation(operation) {
@@ -210,4 +219,4 @@ function singleinputoperation(operation) {
 
 }
 
-*/ 
+*/

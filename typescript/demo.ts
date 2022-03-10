@@ -56,6 +56,26 @@ console.log("My age is ",mydata);
 mydata = "Kishan Patel";
 console.log("My Name is ",mydata);
 
+// TypeScript Unions
+
+interface userdata{
+    name:string,
+    carname:string,
+    age:number,
+    getName:()=>string
+}
+let displaydata1:userdata = {
+    name:"Kishan Patel",
+    carname:"Rolls Royce",
+    age:21,
+    getName:function()
+    {
+        return this.name;
+    }
+}
+console.log("This is Interface ",displaydata1)
+console.log("This is Interface Function ",displaydata1.getName())
+
 // TypeScript Class
 
 class personaldata
@@ -79,3 +99,23 @@ class personaldata
 var object = new personaldata("Kishan Patel","Rolls Royce");
 object.display();
 
+// TypeScript Generics
+
+function displaymydata<T>(arg:T):T{
+    return arg;
+}
+let output1 = displaymydata<string>("Kishan Patel");
+let output2 = displaymydata<number>(21);
+
+console.log(output1);
+console.log(output2);
+
+
+// TypeScript Objects
+
+let data = {
+    name:"Kishan Patel",
+    age:21,
+    carname:"Rolls Royce"
+}
+console.log(data)

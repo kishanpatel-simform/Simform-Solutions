@@ -35,6 +35,16 @@ mydata = 21;
 console.log("My age is ", mydata);
 mydata = "Kishan Patel";
 console.log("My Name is ", mydata);
+var displaydata1 = {
+    name: "Kishan Patel",
+    carname: "Rolls Royce",
+    age: 21,
+    getName: function () {
+        return this.name;
+    }
+};
+console.log("This is Interface ", displaydata1);
+console.log("This is Interface Function ", displaydata1.getName());
 // TypeScript Class
 var personaldata = /** @class */ (function () {
     function personaldata(fullname, carname) {
@@ -48,3 +58,18 @@ var personaldata = /** @class */ (function () {
 }());
 var object = new personaldata("Kishan Patel", "Rolls Royce");
 object.display();
+// TypeScript Generics
+function displaymydata(arg) {
+    return arg;
+}
+var output1 = displaymydata("Kishan Patel");
+var output2 = displaymydata(21);
+console.log(output1);
+console.log(output2);
+// TypeScript Objects
+var data = {
+    name: "Kishan Patel",
+    age: 21,
+    carname: "Rolls Royce"
+};
+console.log(data);

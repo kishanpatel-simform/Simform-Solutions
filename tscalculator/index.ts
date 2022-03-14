@@ -36,14 +36,14 @@ function passoperand(operand) {
 }
 function insertpi() {
    
-    (<HTMLInputElement>document.getElementById('val1')).value = (22/7).toString();
+    displayanswer((22/7).toString());
    
 }
 function erase() {
-    /*input = +(<HTMLInputElement>document.getElementById('val1')).value
-    input = input.substring(0, input.length - 1);
-    (<HTMLInputElement>document.getElementById('val1')).value = input;
-*/
+   let input3 = (<HTMLInputElement>document.getElementById('val1')).value.toString();
+   
+    (<HTMLInputElement>document.getElementById('val1')).value = input3.substring(0, input3.length - 1);
+
 }
 
 function Factorial(n) {
@@ -56,7 +56,7 @@ function Factorial(n) {
 
 function getanswer() {
     try {
-        input =  +(<HTMLInputElement>document.getElementById('val1')).value;
+        input =  getinput();
         input = (input);
         input1 = (input1);
 
@@ -68,155 +68,161 @@ function getanswer() {
       
         switch (operation) {
             case "+":
-                (<HTMLInputElement>document.getElementById('val1')).value = (input1 + input).toString();
+                displayanswer((input1 + input).toString());
                 break;
             case "-":
-                (<HTMLInputElement>document.getElementById('val1')).value = (input1 - input).toString();
+                displayanswer((input1 - input).toString());
                 break;
             case "*":
-                (<HTMLInputElement>document.getElementById('val1')).value = (input1 * input).toString();
+                displayanswer((input1 * input).toString());
                 break;
             case "/":
-                (<HTMLInputElement>document.getElementById('val1')).value = (input1 / input).toString();
+                displayanswer((input1 / input).toString());
                 break;
             case "mod":
-                (<HTMLInputElement>document.getElementById('val1')).value = (input1 % input).toString();
+                displayanswer((input1 % input).toString());
                 break;
             case "exp":
-                (<HTMLInputElement>document.getElementById('val1')).value = (input1 ** input).toString();
+                displayanswer((input1 + input).toString());
                 break;
             case "x^y":
-                (<HTMLInputElement>document.getElementById('val1')).value = (input1 ** input).toString();
+                displayanswer((input1 ** input).toString());
                 break;
             case "log":
-                (<HTMLInputElement>document.getElementById('val1')).value = (Math.log(input) / Math.log(input1)).toString();
+                displayanswer((Math.log(input) / Math.log(input1)).toString());
                 break;
         }
     } catch (err) {
         alert(err);
     }
 }
-
-/*
-
+function getinput() // For Single Input Operation & to get first Input
+{
+    return +(<HTMLInputElement>document.getElementById('val1')).value;
+}
+function displayhistory(data:any) // To display inputs and operation
+{
+    (<HTMLParagraphElement>document.getElementById('inputdata')).innerHTML = data;
+}
+function displayanswer(answer:any) // To display answer
+{
+    (<HTMLInputElement>document.getElementById('val1')).value = answer
+}
 function singleinputoperation(operation) {
     try {
-        input = document.getElementById('val1').value;
-        if (input == '') throw "Enter Input Values";
+        input =  +(<HTMLInputElement>document.getElementById('val1')).value;
+        if (input.toString() == '') throw "Enter Input Values";
 
         switch (operation) {
             case "10raisex":
-                input = Number(input);
-                document.getElementById('val1').value = 10 ** input;
-                document.getElementById('inputdata').innerHTML = "10<sup>" + input + "</sup>";
+                input =  getinput();                 
+                displayanswer((10 ** input).toString());
+                displayhistory("10<sup>" + input + "</sup>");
                 break;
 
             case "deg":
-                input = Number(input);
-                document.getElementById('val1').value = input * 22 / 7 / 180;
-                document.getElementById('inputdata').innerHTML = input + " * &pi; / 180";
+                input =  getinput(); 
+                displayanswer((input * 22 / 7 / 180).toString());
+                displayhistory(input + " * &pi; / 180");                  
                 break;
 
             case "xraise2":
-                input = Number(input);
-                document.getElementById('val1').value = input ** 2;
-                document.getElementById('inputdata').innerHTML = input + "<sup>2</sup>";
+                input =  getinput(); 
+                displayanswer((input ** 2).toString());
+                displayhistory(input + "<sup>2</sup>");                   
                 break;
 
             case "onebyx":
-                input = Number(input);
-                document.getElementById('val1').value = 1 / input;
-                document.getElementById('inputdata').innerHTML = "1 / " + input;
+                input =  getinput(); 
+                displayanswer((1 / input).toString());
+                displayhistory("1 / " + input);                 
                 break;
 
             case "tworootx":
-                input = Number(input);
-                document.getElementById('val1').value = Math.sqrt(input);
-                document.getElementById('inputdata').innerHTML = "2&#8730;" + input;
+                input =  getinput(); 
+                displayanswer((Math.sqrt(input)).toString());
+                displayhistory("2&#8730;" + input);
                 break;
 
             case "acos":
-                input = Number(input);
-                document.getElementById('val1').value = Math.acos(input);
-                document.getElementById('inputdata').innerHTML = "cos(" + input + ")";
+                input =  getinput(); 
+                displayanswer((Math.acos(input)).toString());
+                displayhistory("cos(" + input + ")");                    
                 break;
 
             case "acosh":
-                input = Number(input);
-                document.getElementById('val1').value = Math.acosh(input);
-                document.getElementById('inputdata').innerHTML = "acosh(" + input + ")";
+                input =  getinput(); 
+                displayanswer((Math.acosh(input)).toString());
+                displayhistory("acosh(" + input + ")");                    
                 break;
 
             case "asin":
-                input = Number(input);
-                document.getElementById('val1').value = Math.asin(input);
-                document.getElementById('inputdata').innerHTML = "asin(" + input + ")";
+                input =  getinput(); 
+                displayanswer((Math.asin(input)).toString());
+                displayhistory("asin(" + input + ")");                    
                 break;
 
             case "asinh":
-                input = Number(input);
-                document.getElementById('val1').value = Math.asinh(input);
-                document.getElementById('inputdata').innerHTML = "asinh(" + input + ")";
+                input =  getinput(); 
+                displayanswer((Math.asinh(input)).toString());
+                displayhistory("asinh(" + input + ")");                    
                 break;
-
+            
             case "atan":
-                input = Number(input);
-                document.getElementById('val1').value = Math.atan(input);
-                document.getElementById('inputdata').innerHTML = "atan(" + input + ")";
+                input =  getinput(); 
+                displayanswer((Math.atan(input)).toString());
+                displayhistory("atan(" + input + ")");                    
                 break;
-
+            
             case "atanh":
-                input = Number(input);
-                document.getElementById('val1').value = Math.atanh(input);
-                document.getElementById('inputdata').innerHTML = "atanh(" + input + ")";
+                input =  getinput(); 
+                displayanswer((Math.atanh(input)).toString());
+                displayhistory("atanh(" + input + ")");                    
                 break;
-
+                        
             case "cos":
-                input = Number(input);
-                document.getElementById('val1').value = Math.cos(input);
-                document.getElementById('inputdata').innerHTML = "cos(" + input + ")";
+                input =  getinput(); 
+                displayanswer((Math.cos(input)).toString());
+                displayhistory("cos(" + input + ")");                    
                 break;
 
             case "cosh":
-                input = Number(input);
-                document.getElementById('val1').value = Math.cosh(input);
-                document.getElementById('inputdata').innerHTML = "cosh(" + input + ")";
+                input =  getinput(); 
+                displayanswer((Math.cosh(input)).toString());
+                displayhistory("cosh(" + input + ")");                    
                 break;
 
             case "sin":
-                input = Number(input);
-                document.getElementById('val1').value = Math.sin(input);
-                document.getElementById('inputdata').innerHTML = "sin(" + input + ")";
+                input =  getinput(); 
+                displayanswer((Math.sin(input)).toString());
+                displayhistory("sin(" + input + ")");                    
                 break;
 
             case "sinh":
-                input = Number(input);
-                document.getElementById('val1').value = Math.sinh(input);
-                document.getElementById('inputdata').innerHTML = "sinh(" + input + ")";
+                input =  getinput(); 
+                displayanswer((Math.sinh(input)).toString());
+                displayhistory("sinh(" + input + ")");                    
                 break;
 
             case "tan":
-                input = Number(input);
-                document.getElementById('val1').value = Math.tan(input);
-                document.getElementById('inputdata').innerHTML = "tan(" + input + ")";
+                input =  getinput(); 
+                displayanswer((Math.tan(input)).toString());
+                displayhistory("tan(" + input + ")");                    
                 break;
 
             case "tanh":
-                input = Number(input);
-                document.getElementById('val1').value = Math.tanh(input);
-                document.getElementById('inputdata').innerHTML = "tanh(" + input + ")";
+                input =  getinput(); 
+                displayanswer((Math.tanh(input)).toString());
+                displayhistory("tanh(" + input + ")");                    
                 break;
 
             case "factorial":
-                input = Number(input);
-                document.getElementById('val1').value = Factorial(input);
-                document.getElementById('inputdata').innerHTML = "n!(" + input + ")";
-                break;
+                input =  getinput(); 
+                displayanswer(Factorial(input).toString());
+                displayhistory("n!(" + input + ")");   
+                break;                
         }
     } catch (err) {
         alert(err);
     }
-
 }
-
-*/

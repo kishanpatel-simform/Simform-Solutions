@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
-        "outDir":"src"
+        "outDir":"src",
+       "target": "ES2015"
     }
 }

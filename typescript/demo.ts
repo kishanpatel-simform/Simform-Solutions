@@ -106,9 +106,11 @@ function displaymydata<T>(arg:T):T{
 }
 let output1 = displaymydata<string>("Kishan Patel");
 let output2 = displaymydata<number>(21);
+let output3 = displaymydata<object>({name:"Kishan Patel",age:21});
 
-console.log(output1);
-console.log(output2);
+console.log("This is String Output :- ",output1);
+console.log("This is Number Output :- ",output2);
+console.log("This is Object Output :- ",output3);
 
 
 // TypeScript Objects
@@ -119,3 +121,49 @@ let data = {
     carname:"Rolls Royce"
 }
 console.log(data)
+
+// TypeScript Enum
+
+enum Days
+{
+    mon="Monday",
+    tue="Tuesday",
+    wed="Wednesday",
+    thu="Thursday",
+    fri="Friday",
+    sat="Saturday",
+    sun="Sunday"
+
+}
+
+let days:Days
+console.log("Value of mon : ",Days.mon)
+console.log("Value of tue : ",Days.tue)
+console.log("Value of wed : ",Days.wed)
+console.log("Value of thu : ",Days.thu)
+console.log("Value of fri : ",Days.fri)
+console.log("Value of sat : ",Days.sat)
+console.log("Value of sun : ",Days.sun)
+
+// TypeScript Enum Functions
+
+function enumfunction(day:Days){
+    return day
+}
+console.log("Function Value of mon : ",enumfunction(Days.mon))
+console.log("Function Value of tue : ",enumfunction(Days.tue))
+
+// TypeScript Symbol
+
+let s1=Symbol("d1");
+
+class Demo{
+    [s1]()
+    {
+        return "This is Symbol Example"
+    }
+}
+let obj1 = new Demo()
+console.log(obj1[s1]())
+
+

@@ -1,5 +1,7 @@
 {
     "compilerOptions": {
-        "outDir": "src"
+        "outDir": "src",
+        "lib": ["ES2015","ES2016","DOM","ES5"]
+        
     }
 }

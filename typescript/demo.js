@@ -64,8 +64,10 @@ function displaymydata(arg) {
 }
 var output1 = displaymydata("Kishan Patel");
 var output2 = displaymydata(21);
-console.log(output1);
-console.log(output2);
+var output3 = displaymydata({ name: "Kishan Patel", age: 21 });
+console.log("This is String Output :- ", output1);
+console.log("This is Number Output :- ", output2);
+console.log("This is Object Output :- ", output3);
 // TypeScript Objects
 var data = {
     name: "Kishan Patel",
@@ -73,3 +75,40 @@ var data = {
     carname: "Rolls Royce"
 };
 console.log(data);
+// TypeScript Enum
+var Days;
+(function (Days) {
+    Days["mon"] = "Monday";
+    Days["tue"] = "Tuesday";
+    Days["wed"] = "Wednesday";
+    Days["thu"] = "Thursday";
+    Days["fri"] = "Friday";
+    Days["sat"] = "Saturday";
+    Days["sun"] = "Sunday";
+})(Days || (Days = {}));
+var days;
+console.log("Value of mon : ", Days.mon);
+console.log("Value of tue : ", Days.tue);
+console.log("Value of wed : ", Days.wed);
+console.log("Value of thu : ", Days.thu);
+console.log("Value of fri : ", Days.fri);
+console.log("Value of sat : ", Days.sat);
+console.log("Value of sun : ", Days.sun);
+// TypeScript Enum Functions
+function enumfunction(day) {
+    return day;
+}
+console.log("Function Value of mon : ", enumfunction(Days.mon));
+console.log("Function Value of tue : ", enumfunction(Days.tue));
+// TypeScript Symbol
+var s1 = Symbol("d1");
+var Demo = /** @class */ (function () {
+    function Demo() {
+    }
+    Demo.prototype[s1] = function () {
+        return "This is Symbol Example";
+    };
+    return Demo;
+}());
+var obj1 = new Demo();
+console.log(obj1[s1]());

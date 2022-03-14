@@ -166,4 +166,7 @@ class Demo{
 let obj1 = new Demo()
 console.log(obj1[s1]())
 
+let obj2 = new Demo()
+console.log(obj2[s1]())
+
 

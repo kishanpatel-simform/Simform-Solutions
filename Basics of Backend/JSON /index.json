@@ -1,0 +1,67 @@
+{
+    "CE-dept": [{
+            "firstname": "Kishan",
+            "middlename": "Navinbhai",
+            "suname": "Patel",
+            "age": 21,
+            "enrollomentno": "190283107014",
+            "city": "Ahmedabad",
+            "dob": { "day": 12, "month": 12, "year": 2000 },
+            "sgpa": [9.55, 9.57, 9.61, 9.70, 9.87, 10]
+
+        },
+        {
+            "firstname": "Virti",
+            "middlename": "Janakbhai",
+            "suname": "Vaghani",
+            "age": 21,
+            "enrollomentno": "190283107015",
+            "city": "Ahmedabad",
+            "dob": { "day": 2, "month": 10, "year": 2000 },
+            "sgpa": [9.85, 9.87, 9.81, 9.90, 9.97, 10]
+        }
+
+    ],
+    "BE-dept": [{
+            "firstname": "Yash",
+            "middlename": "Niravbhai",
+            "suname": "Radadiya",
+            "age": 21,
+            "enrollomentno": "190283107019",
+            "city": "Surat",
+            "dob": { "day": 6, "month": 8, "year": 2000 },
+            "sgpa": [8.55, 8.57, 8.61, 8.70, 8.87, 9.5]
+        },
+        {
+            "firstname": "Jaymin",
+            "middlename": "Sanjaybhai",
+            "suname": "Prajapati",
+            "age": 20,
+            "enrollomentno": "190283107017",
+            "city": "Ahmedabad",
+            "dob": { "day": 13, "month": 7, "year": 2001 },
+            "sgpa": [9.75, 9.87, 9.91, 9.90, 9.67, 10]
+        }
+    ],
+    "ME-Dept": [{
+            "firstname": "Arvind",
+            "middlename": "Ganshyambhai",
+            "suname": "Solanki",
+            "age": 21,
+            "enrollomentno": "190283107027",
+            "city": "Baroda",
+            "dob": { "day": 3, "month": 7, "year": 2000 },
+            "sgpa": [7.55, 8.57, 8.61, 8.70, 8.87, 8.10]
+        },
+        {
+            "firstname": "Diya",
+            "middlename": "Hiteshbhai",
+            "suname": "Shah",
+            "age": 21,
+            "enrollomentno": "190283107013",
+            "city": "Ahmedabad",
+            "dob": { "day": 12, "month": 12, "year": 2000 },
+            "sgpa": [9.55, 9.97, 9.61, 9.90, 9.87, 10]
+        }
+    ]
+}

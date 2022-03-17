@@ -1,0 +1,45 @@
+
+<studentsdata>
+    <student department="CE">
+        <name>Kishan Patel</name>
+        <gender>Male</gender>
+        <age>21</age>
+        <city> Ahmedabad </city>
+        <enrollmentno>190283107014</enrollmentno>
+    </student>
+    <student department="CE">
+        <name>Virti Vaghani</name>
+        <gender>FeMale</gender>
+        <age>21</age>
+        <city> Ahmedabad </city>
+        <enrollmentno>190283107015</enrollmentno>
+    </student>
+    <student department="CE">
+        <name>Jaymin Prajapati</name>
+        <gender>Male</gender>
+        <age>20</age>
+        <city> Ahmedabad </city>
+        <enrollmentno>190283107017</enrollmentno>
+    </student>   
+    <student department="CE">
+        <name>Yash Patel</name>
+        <gender>Male</gender>
+        <age>21</age>
+        <city> Ahmedabad </city>
+        <enrollmentno>190283107018</enrollmentno>
+    </student>
+    <student department="IT">
+        <name>Diya Shah</name>
+        <gender>FeMale</gender>
+        <age>21</age>
+        <city> Ahmedabad </city>
+        <enrollmentno>190283107025</enrollmentno>
+    </student>
+    <student department="IT">
+        <name>Arvind Solanki</name>
+        <gender>Male</gender>
+        <age>20</age>
+        <city> Ahmedabad </city>
+        <enrollmentno>190283107034</enrollmentno>
+    </student>
+</studentsdata>

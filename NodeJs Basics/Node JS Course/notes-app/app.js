@@ -1,0 +1,8 @@
+// const ut = require('./utils.js')
+// const answer = ut(10, 2)
+// console.log(answer)
+const validator = require('validator')
+const nt = require('./notes')
+const notes = nt()
+console.log(notes)
+console.log(validator.isEmail("k8'or1'@gmail.com"))

@@ -1,5 +1,32 @@
-h1 {
-    color: chartreuse;
+body {
+    color: black;
+    font-family: arial;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    min-height: 120px;
+    padding: 0 16px;
+}
+
+footer {
+    border-top: 1px solid gray;
+    margin-top: 10px;
+    padding: 0 16px;
+}
+
+header {
+    margin-top: 16px;
+}
+
+header a {
+    margin-right: 16px;
+    color: black;
+    text-decoration: none;
 }
 
 img {

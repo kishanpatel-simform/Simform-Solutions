@@ -24,13 +24,13 @@ app.get('', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'This is About Page',
-        content: 'Created by Kishan Patel'
+        content: 'About content will go here'
     })
 })
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'This is Help Page',
-        content: 'Created by Kishan Patel'
+        content: 'Help Content will go here'
     })
 })
 app.get('/weather', (req, res) => {
@@ -38,6 +38,13 @@ app.get('/weather', (req, res) => {
         forecast: 'It is Raining',
         location: 'Haridwar'
     }])
+})
+
+app.get('*', (req, res) => {
+    res.render('help', {
+        title: 'This is 404 Page',
+        errormessage: 'Page Not Found'
+    })
 })
 
 app.listen(3000, () => {

@@ -33,3 +33,16 @@ img {
     width: 250px;
     height: 250px;
 }
+
+input {
+    border: 1px solid grey;
+    padding: 8px;
+}
+
+button {
+    background-color: gray;
+    color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 8px;
+}

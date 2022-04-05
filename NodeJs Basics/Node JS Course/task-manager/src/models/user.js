@@ -2,6 +2,8 @@ const mongoose = require('mongoose')
 const validator = require('validator')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
+const Task = require('./task')
+
 
 const userSchema = new mongoose.Schema({
     name: {
@@ -43,12 +45,18 @@ const userSchema = new mongoose.Schema({
             required: true
         }
 
-    }]
+    }],
+    avatar: {
+        type: Buffer,
 
+    }
+
+}, {
+    timestamps: true
 })
 
 userSchema.virtual('tasks', {
-    ref: 'tasks',
+    ref: 'Task',
     localField: '_id',
     foreignField: 'owner'
 })

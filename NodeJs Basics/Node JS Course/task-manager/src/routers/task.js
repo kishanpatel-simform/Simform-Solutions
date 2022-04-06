@@ -22,8 +22,8 @@ router.get('/tasks', auth, async(req, res) => {
         // }
         // const tasks = await Task.find({ owner, completed }).limit(2)
         //res.status(200).send(req.user)
-        console.dir(req.user)
-        await req.user.populate({ path: 'tasks' })
+        // console.dir(req.user)
+        await req.user.populate({ path: 'tasks', Option })
 
         res.status(200).send(req.user.tasks)
             // res.status(200).send(req.user)

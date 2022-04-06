@@ -4,10 +4,12 @@
     const Task = require('./models/task')
     const userRouter = require('./routers/user')
     const taskRouter = require('./routers/task')
+    const dotenv = require('dotenv')
+    dotenv.config()
 
 
     const app = express()
-    const port = process.env.port | 3000
+    const port = process.env.PORT
 
 
 
@@ -16,7 +18,8 @@
     app.use(taskRouter)
 
     app.listen(port, () => {
-        console.log("Server Running")
+        console.log("Server Running" + port)
+            //console.log(process.env.MONGODBURL)
     })
 
     // const jwt = require('jsonwebtoken')
